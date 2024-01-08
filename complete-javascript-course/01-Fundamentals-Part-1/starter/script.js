@@ -39,18 +39,53 @@
 // const birthYear = 1999;
 // birthYear = 1900;
 
-const now = 2024
-const ageJonas = now - 1991;
-// const ageJonas = 2000 - 1991;
-console.log(ageJonas);
+// const now = 2024
+// const ageJonas = now - 1991;
+// // const ageJonas = 2000 - 1991;
+// console.log(ageJonas);
+//
+// console.log(ageJonas * 2, ageJonas / 2, ageJonas % 2, ageJonas ** 2)
+//
+//
+// let x = 0;
+// ++x;
+// x++;
+// x--;
+// --x;
+// console.log(x)
+//
+// console.log(25 - 10 - 5)
+//
+// let x, y;
+//
+// x = y = 25-10-5;
+//
+// console.log(x, y)
+//
+// const firstName = 'Jonas';
+// const job = 'teacher';
+// const birthYear = 1991;
+//
+// const jonas = `I'm ${firstName}`;
+//
+// console.log(jonas);
 
-console.log(ageJonas * 2, ageJonas / 2, ageJonas % 2, ageJonas ** 2)
+// const age = 19;
+// const isOldEnough = age >= 18;
+//
+// if (isOldEnough) {
+//     console.log(`Enough`);
+// } else {
+//     console.log(`Not Enough`);
+// }
 
+const num = '1111';
 
-let x = 0;
-++x;
-x++;
-x--;
---x;
-console.log(x)
+console.log(Number(num) + 11);
+console.log(num + 11);
+
+console.log('23' - '10' + 3);
+
+console.log('11' - '10' - '4');
+
 
