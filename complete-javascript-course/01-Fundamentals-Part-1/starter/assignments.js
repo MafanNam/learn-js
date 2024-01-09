@@ -20,7 +20,7 @@
 // language = 'Up2';
 // console.log(language)
 
-let population = 10000;
+// let population = 10000;
 // population++;
 // console.log(population);
 // console.log(population > 6000000000);
@@ -34,24 +34,35 @@ let population = 10000;
 
 // console.log(description);
 
-let populationTemp;
-if (population > 33000000) {
-    populationTemp = 13;
-    console.log(`Portugal's population is above average 
-${populationTemp}`)
-} else {
-    populationTemp = 130;
-    console.log(`Portugal's population is 22 million below average
-${populationTemp}`);
-}
+// let populationTemp;
+// if (population > 33000000) {
+//     populationTemp = 13;
+//     console.log(`Portugal's population is above average
+// ${populationTemp}`)
+// } else {
+//     populationTemp = 130;
+//     console.log(`Portugal's population is 22 million below average
+// ${populationTemp}`);
+// }
+//
+// populationTemp = population
+//
+// // console.log(populationTemp)
+//
+// console.log('9' - '5');
+// console.log('19' - '13' + '17');
+// console.log('19' - '13' + 17);
+// console.log('123' < 57);
+// console.log(5 + 6 + '4' + 9 - 4 - 2);
 
-populationTemp = population
+// let numNeighbours = prompt('How many neighbour countries does your country\n' + 'have?')
+//
+// if (numNeighbours == 1) {
+//     console.log('Only 1 border!')
+// } else if (numNeighbours > 1) {
+//     console.log('More than 1 border')
+// } else {
+//     console.log('No borders')
+// }
 
-// console.log(populationTemp)
-
-console.log('9' - '5');
-console.log('19' - '13' + '17');
-console.log('19' - '13' + 17);
-console.log('123' < 57);
-console.log(5 + 6 + '4' + 9 - 4 - 2);
 
