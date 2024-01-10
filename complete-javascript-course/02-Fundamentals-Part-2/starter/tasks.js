@@ -31,30 +31,60 @@
 // // console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
 
 
-const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    },
-};
+// const mark = {
+//     fullName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     },
+// };
+//
+// const john = {
+//     fullName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     },
+// };
+//
+// if (mark.calcBMI() > john.calcBMI()) {
+//     console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
+// } else if (john.bmi > mark.bmi) {
+//     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`);
+// } else {
+//     console.log('Nothing')
+// }
 
-const john = {
-    fullName: 'John Smith',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    },
-};
 
-if (mark.calcBMI() > john.calcBMI()) {
-    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
-} else if (john.bmi > mark.bmi) {
-    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`);
-} else {
-    console.log('Nothing')
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
+}
+
+console.log(tips);
+console.log(totals);
+
+const calcAverage = arr => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
+
+
+
