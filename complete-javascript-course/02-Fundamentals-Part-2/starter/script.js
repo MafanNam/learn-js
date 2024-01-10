@@ -119,34 +119,90 @@
 // const ages = ['f',];
 
 
+// const f1 = 'Michael';
+// const f2 = 'Steven';
+// const f3 = 'Peter';
+//
+// const friends = [f1, f2, f3];
+//
+// friends.push('Jay');
+// friends.unshift('New');
+//
+// console.log(friends);
+//
+//
+// friends.pop();
+// const popItem = friends.pop();
+// console.log(popItem);
+//
+// console.log(friends);
+//
+// friends.shift();
+// console.log(friends);
+//
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Stevenson'));
+//
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+//
+// if (friends.includes('Steven')) {
+//     console.log('You have Petter');
+// }
 
-const f1 = 'Michael';
-const f2 = 'Steven';
-const f3 = 'Peter';
+// const jonasArray = [
+//     'Jonas',
+//     'Schematised',
+//     2024 - 2000,
+//     ['Michael', 'Peter'],
+// ];
+//
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schematised',
+//     age: 2024 - 2000,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter'],
+// };
+//
+// console.log(typeof jonas);
+// console.log(jonas["job"]);
+// console.log(jonas.job);
+//
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+//
+// jonas.location = 'Ukraine';
+// jonas['twitter'] = '@aha';
+//
+// console.log(jonas);
+//
+// console.log(`${jonas.firstName} has ${jonas.friends.length},
+//  and his best friend is called ${jonas.friends.shift()}`);
 
-const friends = [f1, f2, f3];
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schematised',
+    birthYear: 2000,
+    job: 'teacher',
+    friends: ['Michael', 'Peter'],
+    hasDriversLicense: true,
 
-friends.push('Jay');
-friends.unshift('New');
+    // calcAge: function (birthYear) {
+    //     return 2024 - birthYear;
+    // }
 
-console.log(friends);
+    calcAge: function () {
+        return 2024 - this.birthYear;
+    },
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job},
+         and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
+    },
+};
 
+console.log(jonas.calcAge());
+// console.log(jonas['calcAge']());
 
-friends.pop();
-const popItem = friends.pop();
-console.log(popItem);
-
-console.log(friends);
-
-friends.shift();
-console.log(friends);
-
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Stevenson'));
-
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-
-if (friends.includes('Steven')) {
-    console.log('You have Petter');
-}
+console.log(jonas.getSummary())
