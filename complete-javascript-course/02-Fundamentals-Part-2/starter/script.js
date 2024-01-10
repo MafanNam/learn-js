@@ -44,13 +44,13 @@
 // // console.log(calcAge3(2000));
 //
 //
-// const yearsUntilReetirement = (birthYear, firstName) => {
+// const yearsUntilRetirement = (birthYear, firstName) => {
 //     const age = 2024 - birthYear;
 //     const retirement = 65 - age;
 //     return `${firstName} retires in ${retirement}`;
 // }
 //
-// console.log(yearsUntilReetirement(2000, 'Max'));
+// console.log(yearsUntilRetirement(2000, 'Max'));
 
 // function cutFruitPieces(fruit) {
 //     return fruit * 4;
@@ -88,3 +88,65 @@
 // console.log(yearsUntilRetirement(2000, 'Max'));
 // console.log(yearsUntilRetirement(1800, 'Max'));
 
+
+// const f1 = 'Michael';
+// const f2 = 'Steven';
+// const f3 = 'Peter';
+//
+// const friends = [f1, f2, f3];
+//
+// console.log(friends);
+// console.log(friends[0]);
+// console.log(friends[2]);
+// console.log(typeof friends);
+//
+// const arrayFriends = new Array(f1, f2, f3);
+//
+// console.log(arrayFriends.length);
+// console.log(typeof arrayFriends);
+//
+// friends[2] = 'New';
+// friends[3] = 'New3';
+//
+// console.log(friends);
+//
+// const calcAge = years => 2024 - years;
+//
+// const jonas = ['Jonas', 'Sch', friends, arrayFriends];
+// console.log(jonas);
+// console.log(jonas[2][2]);
+//
+// const ages = ['f',];
+
+
+
+const f1 = 'Michael';
+const f2 = 'Steven';
+const f3 = 'Peter';
+
+const friends = [f1, f2, f3];
+
+friends.push('Jay');
+friends.unshift('New');
+
+console.log(friends);
+
+
+friends.pop();
+const popItem = friends.pop();
+console.log(popItem);
+
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Stevenson'));
+
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+
+if (friends.includes('Steven')) {
+    console.log('You have Petter');
+}

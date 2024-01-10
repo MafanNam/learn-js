@@ -1,18 +1,32 @@
+//
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
+//
+// const scoreDolphins = calcAverage(44, 23, 71);
+// const scoreKoalas = calcAverage(65, 54, 49);
+//
+// function checkWinner (avgDolphins, avgKoalas) {
+//     if (avgDolphins >= avgKoalas * 2) {
+//         console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
+//     } else if (avgKoalas >= avgDolphins * 2) {
+//         console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
+//     } else {
+//         console.log('No team wins...')
+//     }
+// }
+//
+// checkWinner(scoreDolphins, scoreKoalas);
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
 
-function checkWinner (avgDolphins, avgKoalas) {
-    if (avgDolphins >= avgKoalas * 2) {
-        console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
-    } else if (avgKoalas >= avgDolphins * 2) {
-        console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
-    } else {
-        console.log('No team wins...')
-    }
-}
+/* Write your code below. Good luck! 🙂 */
+const calcTip = bill => 50 <= bill && bill <= 300 ? bill * 15/100 : bill * 20/100
 
-checkWinner(scoreDolphins, scoreKoalas);
+const bills = [44, 555, 350];
+const tips = [calcTip([bills[0]]), calcTip([bills[1]]), calcTip([bills[2]])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2],]
+console.log(bills);
+console.log(tips);
+console.log(total);
+
+// console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
 
