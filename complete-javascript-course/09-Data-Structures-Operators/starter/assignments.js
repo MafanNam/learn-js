@@ -278,3 +278,84 @@ const books = [
         highlighted: true
     }
 ];
+
+
+// let pageSum = 0;
+//
+// for (let i of books) {
+//     pageSum += i.pages;
+// }
+//
+// console.log(pageSum);
+//
+//
+// const allAuthors = [];
+// for (let i of books) {
+//     if (typeof i.author === 'string') {
+//         allAuthors.push(i.author);
+//     } else {
+//         allAuthors.push(...i.author);
+//     }
+// }
+//
+// console.log(allAuthors);
+//
+// for (let [key, value] of allAuthors.entries()) {
+//     console.log(`${key+1}. ${value}`);
+// }
+
+
+// const bookData = [
+//     ['title', 'Computer Networking: A Top-Down Approach'],
+//     ['author', ['James F. Kurose', 'Keith W. Ross']],
+//     ['publisher', 'Addison Wesley'],
+// ];
+//
+// // Do the rest
+// const newBook = {
+//     [bookData[0][0]]: bookData[0][1],
+//     [bookData[1][0]]: bookData[1][1],
+//     [bookData[2][0]]: bookData[2][1]
+// };
+//
+// console.log(newBook);
+//
+// const pages = 880;
+//
+// const newBook2 = {
+//     title: 'The C Programming Language',
+//     author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+//     pages,
+// };
+// console.log(newBook2);
+
+// const newBook2 = {
+//     title: 'The C Programming Language',
+//     author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+// };
+//
+// const getFirstKeyword = function (book) {
+//     return book.keywords?.[0];
+// };
+//
+// console.log(getFirstKeyword(books[0]));
+// console.log(getFirstKeyword(newBook2));
+//
+//
+// const entries = [];
+//
+// for (let key of Object.keys(books[0].thirdParty.goodreads)) {
+//     entries.push([key]);
+// }
+//
+// console.log(entries);
+//
+// for (const [index, value] of Object.values(books[0].thirdParty.goodreads).entries()) {
+//     // entries[index].push(value);
+//     entries[index].push(value);
+// }
+//
+// console.log(entries);
+//
+// const entries2 = Object.entries(books[0].thirdParty.goodreads);
+// console.log(entries2);
