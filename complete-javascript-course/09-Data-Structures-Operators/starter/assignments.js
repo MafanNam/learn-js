@@ -280,6 +280,33 @@ const books = [
 ];
 
 
+// const firstBookMap = new Map(Object.entries(books[0]));
+// // console.log(firstBookMap);
+//
+// for (const [key, value] of firstBookMap) {
+//     typeof value === 'number' && console.log(key, value);
+// }
+
+
+
+
+// const allKeywords = [];
+// for (const book of books) {
+//     allKeywords.push(...book.keywords);
+// }
+//
+// // console.log(allKeywords);
+//
+// const uniqueKeywords = new Set(allKeywords);
+// uniqueKeywords.add('coding').add('science');
+// uniqueKeywords.delete('business');
+// uniqueKeywords.clear();
+// console.log(uniqueKeywords);
+//
+// const uniqueKeywordsArr = [...uniqueKeywords];
+// console.log(uniqueKeywordsArr);
+
+
 // let pageSum = 0;
 //
 // for (let i of books) {
@@ -359,3 +386,18 @@ const books = [
 //
 // const entries2 = Object.entries(books[0].thirdParty.goodreads);
 // console.log(entries2);
+
+
+// const bookMap = new Map([
+//     ['title', 'Clean Code'],
+//     ['author', 'Robert C. Martin'],
+//     ['publisher', 'Portfolio']],
+// )
+//
+// bookMap.set('pages', 464);
+// console.log(bookMap);
+//
+// console.log(`${bookMap.get('title')} by ${bookMap.get('author')}`);
+// console.log(bookMap.size);
+//
+// bookMap.has('author') && console.log('The author of the book is known');
