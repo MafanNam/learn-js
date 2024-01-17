@@ -116,40 +116,62 @@
 // console.log(scorers);
 
 
-const gameEvents = new Map([
-    [17, '⚽ GOAL'],
-    [36, '🔁 Substitution'],
-    [47, '⚽ GOAL'],
-    [61, '🔁 Substitution'],
-    [64, '🔶 Yellow card'],
-    [69, '🔴 Red card'],
-    [70, '🔁 Substitution'],
-    [72, '🔁 Substitution'],
-    [76, '⚽ GOAL'],
-    [80, '⚽ GOAL'],
-    [92, '🔶 Yellow card'],
-]);
+// const gameEvents = new Map([
+//     [17, '⚽ GOAL'],
+//     [36, '🔁 Substitution'],
+//     [47, '⚽ GOAL'],
+//     [61, '🔁 Substitution'],
+//     [64, '🔶 Yellow card'],
+//     [69, '🔴 Red card'],
+//     [70, '🔁 Substitution'],
+//     [72, '🔁 Substitution'],
+//     [76, '⚽ GOAL'],
+//     [80, '⚽ GOAL'],
+//     [92, '🔶 Yellow card'],
+// ]);
+//
+// // 1.
+// const events = new Set(gameEvents.values());
+// console.log(events);
+//
+// // 2.
+// console.log(gameEvents.delete(64));
+// console.log(gameEvents);
+//
+// // 3.
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+//
+// console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+//
+// // 4.
+// for (const [key, value] of gameEvents) {
+//     const half = key <= 45 ? 'FIRST' : 'SECOND';
+//     console.log(`[${half} HALF] ${key}: ${value}`);
+// }
 
-// 1.
-const events = new Set(gameEvents.values());
-console.log(events);
 
-// 2.
-console.log(gameEvents.delete(64));
-console.log(gameEvents);
-
-// 3.
-const time = [...gameEvents.keys()].pop();
-console.log(time);
-
-console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
-
-// 4.
-for (const [key, value] of gameEvents) {
-    const half = key <= 45 ? 'FIRST' : 'SECOND';
-    console.log(`[${half} HALF] ${key}: ${value}`);
-}
-
-
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+//
+// const textAreaEl = document.querySelector('textarea');
+// const btnEl = document.querySelector('button');
+//
+// textAreaEl.textContent = 'underscore_case\n' +
+//     'first_name\n' +
+//     'Some_Variable\n' +
+//     'calculate_AGE\n' +
+//     'delayed_departure'
+//
+// btnEl.addEventListener('click', function () {
+//     const lstStr = textAreaEl.value.toLowerCase().trim().split('\n');
+//     console.log(lstStr);
+//
+//     for (const [num, n] of lstStr.entries()) {
+//         const [first, second] = n.split('_');
+//         const word = first + second[0].toUpperCase() + second.slice(1);
+//         console.log(word.padEnd(20, ' ') + '🆒'.repeat(num + 1));
+//     }
+// })
 
 
