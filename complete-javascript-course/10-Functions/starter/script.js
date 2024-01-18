@@ -183,7 +183,83 @@
 //  const addVAT2 = ad2(0.3);
 //  console.log(addVAT2(300));
 
+// const runOnce = function () {
+//     console.log('This will never run again!');
+// };
+// runOnce();
+//
+// (function () {
+//     console.log('This will never run again!');
+//     const isPrivate = 23;
+// })();
+//
+// // console.log(isPrivate);
+//
+// (() => console.log('This will never run again!'))();
+//
+// {
+//     const isAHA = 23;
+//     var notPrivate = 46;
+// }
+// console.log(notPrivate);
 
+//
+// const secureBooking = function () {
+//     let passengerCount = 0;
+//
+//     return function () {
+//         passengerCount++;
+//         console.log(`${passengerCount} passengers`);
+//     };
+// };
+//
+// const booker = secureBooking();
+//
+// booker();
+// booker();
+// booker();
+//
+// console.dir(booker);
+
+
+// let f;
+//
+// const g = function () {
+//     const a = 23;
+//     f = function () {
+//         console.log(a * 2);
+//     };
+// };
+//
+// const h = function () {
+//     const b = 777;
+//     f = function () {
+//         console.log(b * 2);
+//     };
+// };
+//
+// g();
+// f();
+//
+// // Re
+// h();
+// f();
+// console.dir(f);
+//
+// // EX 2
+// const boardPassengers = function (n, wait) {
+//     // const perGroup = n / 3;
+//
+//     setTimeout(function () {
+//         console.log(`We are now boarding all ${n} passengers`);
+//         console.log(`There are 3 groups, each with ${perGroup} passengers`);
+//     }, wait * 1000);
+//
+//     console.log(`Will start boarding in ${wait} seconds`);
+// };
+//
+// const perGroup = 1000;
+// boardPassengers(180, 3);
 
 
 
