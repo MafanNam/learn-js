@@ -81,7 +81,36 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-console.log(containerMovements.innerHTML);
+const calcDisplayBalance = function (movements) {
+    const balance = movements.reduce((acc, mov) => acc + mov, 0);
+    labelBalance.textContent = `${balance} UAH`;
+};
+calcDisplayBalance(account1.movements);
+
+
+
+const createUsernames = function (accs) {
+    accs.forEach(function (acc) {
+        acc.username = acc.owner.toLowerCase().split(' ').map(
+            name => name[0]).join('');
+    });
+};
+createUsernames(accounts);
+
+
+
+
+
+// const user = 'Steven Thomas Williams';
+
+// createUsernames(accounts);
+// console.log(accounts);
+
+
+// console.log(containerMovements.innerHTML);
+
+
+// console.log(username);
 
 
 // /////////////////////////////////////////////////
@@ -179,12 +208,65 @@ console.log(containerMovements.innerHTML);
 // currenciesUnique.forEach(function (value, _, set) {
 //   console.log(`${_}: ${value}`);
 // })
+//
+//
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const eurToUsd = 1.1;
+//
+// const movementsUSD = movements.map(function (value) {
+//     return value * eurToUsd;
+// });
+// console.log(movements);
+// console.log(movementsUSD);
+//
+// const movUSDFor = [];
+// for (const mov of movements) movUSDFor.push(mov * eurToUsd);
+// console.log(movUSDFor);
+//
+// const func = mm => 4;
+// console.log(func(4));
+//
+// const movementsDescriptions = movements.map((movement, index, arr) =>
+//     `Movement ${index + 1}: You ${movement > 0 ? 'deposited' : 'withdrew'} ${movement}`);
+//
+// console.log(movementsDescriptions);
 
 
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+//
+// const deposits = movements.filter(function (mov) {
+//     return mov > 0;
+// });
+//
+// console.log(movements);
+// console.log(deposits);
+//
+// const depositsFor = [];
+// for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+// console.log(depositsFor);
+//
+// const withdrawals = movements.filter(mov => mov < 0);
+// console.log(withdrawals);
 
 
-
-
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//     return acc + cur;
+// }, 0);
+//
+// console.log(balance);
+//
+//
+// // MAX val
+// const max = movements.reduce((acc, mov) => {
+//     console.log(acc, mov);
+//     if (acc > mov) return acc;
+//     else return mov;
+// }, 0);
+// console.log(max);
 
 
 
