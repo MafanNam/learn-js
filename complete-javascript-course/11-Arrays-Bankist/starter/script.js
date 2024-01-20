@@ -87,6 +87,31 @@ const calcDisplayBalance = function (movements) {
 };
 calcDisplayBalance(account1.movements);
 
+const calcDisplaySummary = function (movements) {
+    const incomes = movements
+        .filter(mov => mov > 0)
+        .reduce((acc, mov) => acc + mov, 0);
+    labelSumIn.textContent = `${incomes} UAH`;
+
+    const out = movements
+        .filter(mov => mov < 0)
+        .reduce((acc, mov) => acc + mov, 0);
+    labelSumOut.textContent = `${Math.abs(out)} UAH`;
+
+    const interest = movements
+        .filter(mov => mov > 0)
+        .map(deposit => deposit * 1.2/100)
+        .filter((int, i, arr) => {
+            console.log(arr);
+            return int >= 1;
+        })
+        .reduce((acc, int) => acc + int, 0);
+    labelSumInterest.textContent = `${interest} UAH`;
+};
+calcDisplaySummary(account1.movements);
+
+
+
 
 
 const createUsernames = function (accs) {
@@ -96,9 +121,6 @@ const createUsernames = function (accs) {
     });
 };
 createUsernames(accounts);
-
-
-
 
 
 // const user = 'Steven Thomas Williams';
@@ -267,6 +289,21 @@ createUsernames(accounts);
 //     else return mov;
 // }, 0);
 // console.log(max);
+
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const eurToUsd = 1.1;
+//
+// const totalDepositUSD = movements
+//     .filter(mov => mov > 0)
+//     .map((mov, i, arr) => {
+//         console.log(arr);
+//         return mov * eurToUsd;
+//     }).reduce((acc, mov) => acc + mov, 0);
+//
+// console.log(totalDepositUSD);
+
+
 
 
 

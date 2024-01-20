@@ -28,3 +28,12 @@ const calcAverageHumanAge = function (ages) {
 
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 
+
+const calcAverageHumanAgeChaining = ages => ages
+    .map(val => val <= 2 ? 2 * val : 16 + val * 4)
+    .filter(val => val >= 18)
+    .reduce((acc, val, i, arr) => acc + val / arr.length, 0);
+
+
+console.log(calcAverageHumanAgeChaining([5, 2, 4, 1, 15, 8, 3]));
+
