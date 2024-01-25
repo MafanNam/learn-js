@@ -1,13 +1,13 @@
 'use strict';
 
-const Person = function (firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-
-    // this.calcAge = function () {
-    //     console.log(2024 - this.birthYear);
-    // };
-};
+// const Person = function (firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//
+//     // this.calcAge = function () {
+//     //     console.log(2024 - this.birthYear);
+//     // };
+// };
 
 // const jonas = new Person('Jonas', 1991);
 // console.log(jonas);
@@ -56,11 +56,107 @@ const Person = function (firstName, birthYear) {
 // const h1 = document.querySelector('h1');
 
 
+// // class expression
+// const PersonCL = class {
+//
+// };
+
+// class declaration
+// class PersonCL {
+//     constructor(fullName, birthYear) {
+//         this.fullName = fullName;
+//         this.birthYear = birthYear;
+//     };
+//
+//     calcAge () {
+//         console.log(2024 - this.birthYear);
+//     };
+//
+//     get age() {
+//         return 2024 - this.birthYear;
+//     };
+//
+//     get fullName() {
+//         return this._fullName;
+//     };
+//
+//     set fullName(name) {
+//         if (name.includes(' ')) this._fullName = name;
+//         else console.log(`${name} is not a full name!`);
+//     };
+//
+//     static hey() {
+//         console.log('Hey there!');
+//     };
+//
+//
+// }
+//
+// const jessica = new PersonCL('Jessica Davis', 1996);
+// console.log(jessica)
+// jessica.calcAge();
+// console.log(jessica.age);
+//
+//
+// PersonCL.prototype.greet = function () {
+//     console.log(`Hey ${this.fullName}`);
+// };
+//
+// jessica.greet();
+//
+// const walter = new PersonCL('Walter White', 1956);
+//
+//
+//
+// // 1.
+//
+// const account = {
+//     owner: 'Jonas',
+//     movements: [200, 530, 120, 300],
+//
+//     get latest() {
+//         return this.movements.slice(-1).pop();
+//     },
+//
+//     set latest(mov) {
+//         this.movements.push(mov);
+//     },
+//
+// };
+//
+// console.log(account.latest);
+//
+// account.latest = 50;
+// console.log(account.movements);
+//
+//
+// PersonCL.hey();
+// // jessica.hey();
 
 
+const PersonProto = {
+    calcAge() {
+        console.log(2024 - this.birthYear);
+    },
 
+    init(firstName, birthYear) {
+        this.firstName = firstName;
+        this.birthYear = birthYear;
+    },
+};
 
+const steven = Object.create(PersonProto);
+console.log(steven);
+// steven.calcAge();
 
+steven.name = 'Steven';
+steven.birthYear = 2000;
+
+steven.calcAge();
+
+const sarah = Object.create(PersonProto);
+sarah.init('Sarah', 1979);
+sarah.calcAge();
 
 
 
