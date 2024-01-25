@@ -134,33 +134,64 @@
 // // jessica.hey();
 
 
-const PersonProto = {
-    calcAge() {
-        console.log(2024 - this.birthYear);
-    },
+// const PersonProto = {
+//     calcAge() {
+//         console.log(2024 - this.birthYear);
+//     },
+//
+//     init(firstName, birthYear) {
+//         this.firstName = firstName;
+//         this.birthYear = birthYear;
+//     },
+// };
+//
+// const steven = Object.create(PersonProto);
+// console.log(steven);
+// // steven.calcAge();
+//
+// steven.name = 'Steven';
+// steven.birthYear = 2000;
+//
+// steven.calcAge();
+//
+// const sarah = Object.create(PersonProto);
+// sarah.init('Sarah', 1979);
+// sarah.calcAge();
 
-    init(firstName, birthYear) {
-        this.firstName = firstName;
-        this.birthYear = birthYear;
-    },
+
+const Person = function (firstName, birthYear) {
+    this.firstName = firstName
+    this.birthYear = birthYear
+};
+Person.prototype.calcAge = function () {
+    console.log(2024 - this.birthYear);
 };
 
-const steven = Object.create(PersonProto);
-console.log(steven);
-// steven.calcAge();
-
-steven.name = 'Steven';
-steven.birthYear = 2000;
-
-steven.calcAge();
-
-const sarah = Object.create(PersonProto);
-sarah.init('Sarah', 1979);
-sarah.calcAge();
 
 
+const Student = function (firstName, birthYear, course) {
+    Person.call(this, firstName, birthYear);
+    this.course = course;
+};
+
+Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype = Person.prototype;
+
+Student.prototype.introduce = function () {
+    console.log(`My name is ${this.firstName} and I study ${this.course}`);
+}
 
 
+const mike = new Student('Mike', 2000, 'Computer Science');
+console.log(mike);
+mike.introduce();
+mike.calcAge();
+
+console.log(mike.__proto__);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
 
 
 
