@@ -3,3 +3,11 @@ final
 node_modules
 dist
 .parcel-cache
+final-1-after-tailwind
+final-2-final
+final-1-after-setup
+final-2-after-supabase
+final-3-after-react-query
+final-4-after-advanced-patterns
+final-5-after-sort-filter-pagination
+final-6-final
