@@ -6,7 +6,7 @@ Use starter code to start each section, and **final code to compare it with your
 
 There is also a the [updates-and-fixes](https://github.com/jonasschmedtmann/ultimate-react-course/tree/updates-and-fixes) branch which is kept up-to-date with **latest library updates and important bugfixes 🐛**
 
-🚨 **_Please read the following Frequently Asked Questions (FAQ) carefully before starting the course_** 🚨
+🚨 **_Please read the following Frequently Asked Question (FAQ) carefully before starting the course_** 🚨
 
 ## FAQ
 
