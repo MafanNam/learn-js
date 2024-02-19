@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {useCities} from "../contexts/CitiesContext.jsx";
 import Spinner from "./Spinner.jsx";
 import BackButton from "./BackButton.jsx";
+import {get} from "leaflet/src/dom/DomUtil.js";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -19,7 +20,7 @@ function City() {
 
   useEffect(() => {
     getCity(id)
-  }, [id]);
+  }, [getCity, id]);
 
   if(isLoading) return <Spinner/>
 
