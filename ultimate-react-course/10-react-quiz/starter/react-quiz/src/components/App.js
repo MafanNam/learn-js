@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Main from "./Main";
-import {useEffect} from "react";
 import Loader from "./Loader";
 import Error from "./Error";
 import StartScreen from "./StartScreen";
