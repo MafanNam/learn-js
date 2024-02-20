@@ -1,6 +1,5 @@
 # Course Material and FAQ for the Ultimate React Course
 
-### A final version of the course projects
 
 - [Pizza Menu](https://fast-react-pizza-menu.netlify.app/) (Components, props, JSX)
 - [Travel List](https://travel-list-jonas.netlify.app/) (useState and state management)
