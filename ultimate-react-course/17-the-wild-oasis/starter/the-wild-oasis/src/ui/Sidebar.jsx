@@ -15,6 +15,8 @@ const StyledSidebar = styled.aside`
 `;
 
 export default function Sidebar() {
+
+
   return (
     <StyledSidebar>
       <Logo/>
