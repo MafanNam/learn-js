@@ -8,7 +8,7 @@ import Spinner from "../../ui/Spinner.jsx";
 import Modal from "../../ui/Modal.jsx";
 import ConfirmDelete from "../../ui/ConfirmDelete.jsx";
 import Table from "../../ui/Table.jsx";
-import {Menus} from "../../ui/Menus.jsx";
+import Menus from "../../ui/Menus.jsx";
 
 // const TableRow = styled.div`
 //     display: grid;

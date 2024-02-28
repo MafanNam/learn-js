@@ -68,7 +68,7 @@ const StyledButton = styled.button`
 const MenusContext = createContext();
 
 // eslint-disable-next-line react/prop-types
-export function Menus({children}) {
+export default function Menus({children}) {
   const [openId, setOpenId] = useState('');
   const [position, setPosition] = useState(null);
 
