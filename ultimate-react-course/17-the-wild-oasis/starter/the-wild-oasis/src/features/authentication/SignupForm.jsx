@@ -5,11 +5,13 @@ import Input from "../../ui/Input";
 import {useForm} from "react-hook-form";
 import {useSignup} from "./useSignup.js";
 import Spinner from "../../ui/Spinner.jsx";
+import {useNavigate} from "react-router-dom";
 
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
   const {signup, isLoading} = useSignup();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -22,7 +24,10 @@ function SignupForm() {
 
   function onSubmit({fullName, email, password}) {
     signup({fullName, email, password}, {
-      onSettled: () => reset(),
+      onSettled: () => {
+        reset();
+        navigate('/');
+      },
     });
   }
 
